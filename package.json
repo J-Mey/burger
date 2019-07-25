@@ -1,0 +1,25 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Eat-Da-Burger! Node Express Handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-Mey/burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/J-Mey/burger/issues"
+  },
+  "homepage": "https://github.com/J-Mey/burger#readme",
+  "dependencies": {
+    "env": "0.0.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1"
+  }
+}
