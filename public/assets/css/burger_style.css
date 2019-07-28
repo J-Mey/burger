@@ -1,4 +1,11 @@
 body {
-    background: dodgerblue;
-    
+    background: dodgerblue; 
+}
+
+.container {
+    align-content: center;
+}
+
+.class {
+    size: 18px;
 }
