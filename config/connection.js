@@ -5,7 +5,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: process.env.DB_PASS,
+    password: "Ms200006!",
     database: "burgers_db"
 });
 
@@ -19,4 +19,4 @@ connection.connect(function(err) {
 });
 
 // Export the connection
-module.export = connection;
+module.exports = connection;
