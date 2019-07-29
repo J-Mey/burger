@@ -1,53 +1,59 @@
 <div class="container">
-    <h1> Eat-Da-Burger! </h1>
+    <br>
+    <br>   
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    <h2>Ready!</h2>
+                </div>
+                    <ul class="list-group list-group-flush">
+                        {{#each burgers}}
+                            {{#unless this.devoured}}
+                                <li class ="list-group-item">{{burger_name}}
+                                    <button class="devour-state btn btn-danger" data-id="{{id}}" data-newDevoured="{{finished}}" type="submit">Finish Him!
+                                        {{#if finished}}Finish!{{/if}}
+                                    </button>
+                                </li>        
+                            {{/unless}} 
+                        {{/each}}    
+                    </ul>
+            </div>        
+        </div>
 
-    <img src="../assets/img/burger_cat.png" alt="cat burger">
-
-<div class="unDevoured">
-    <ul>
-    <div class="card">
-        <div class="card-body">     
-            {{#each burgers}}
-                {{#unless this.devoured}}
-                    <li>{{burger_name}}</li>
-                        <button class="devour-state btn btn-danger" data-id="{{id}}" data-newDevoured="{{finished}}" type="submit">Finish Him!
-                            {{#if finished}}Finish!{{/if}}
-                        </button>
-                {{/unless}} 
-            {{/each}}
+        <div class="col-sm-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    <h2>Devoured!</h2>
+                </div>
+                    <ul class="list-group list-group-flush">
+                        {{#each burgers}}
+                            {{#if devoured}}  
+                                <li class ="list-group-item">{{burger_name}}</li>
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+            </div>                
         </div>
     </div>
-    </ul>
-</div>
 
-<div class="devoured">
-    <ul>
-        <div class="card">
-            <div class="card-body"> 
-                {{#each burgers}}
-                    {{#if devoured}}
-                        <li>{{burger_name}}</li>
-                    {{/if}}
-                {{/each}}
-            </div>
+    <br>
+    <br>
+
+    <div class="row">  
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <h2>Add a Burger</h2>
+            <br>
+                <form class="create-form" action="/api/burgers" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="burgerSubmit" name="burger_name" placeholder="Burger Name">
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Submit</button>
+                        <br>
+                    <p>Add a Burger, by clicking on "Submit"!</p>
+                </form>
         </div>
-    </ul>
-</div>
-
-
-
-
-<div class="addBurger">
-    <h2>Add a Burger</h2>
-        <form class="create-form" action="/api/burgers" method="POST">
-
-            <div class="form-group">
-                <label for="ca">Burger Name:</label>
-                <input type="text" id="burgerSubmit" name="burger_name">
-            </div>
-                <br>
-    <button type="submit" class="btn btn-secondary">Submit</button>
-    <p>Add a Burger, by clicking on "Submit"!</p>
-        </form>
-</div>
+        <div class="col-sm-4"></div>
+    </div>
 </div>

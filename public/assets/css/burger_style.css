@@ -1,11 +1,25 @@
 body {
-    background: dodgerblue; 
+    background: dodgerblue;
 }
 
-.container {
-    align-content: center;
+#cat-burger {
+    display: block;
+    margin: auto
 }
 
-.class {
-    size: 18px;
+h1,h2 {
+    text-align: center
+}
+
+.card {
+    margin: auto;
+}
+
+.btn {
+    margin: auto;
+}
+
+#create-form {
+    margin: auto;
+    display: block
 }
